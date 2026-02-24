@@ -51,4 +51,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: username/randomforestimage:latest, username/randomforestimage:${{ github.sha }}
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/randomforestimage:latest, ${{ secrets.DOCKERHUB_USERNAME }}/randomforestimage:${{ github.sha }}
