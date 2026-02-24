@@ -28,8 +28,6 @@ try:
     rmse = root_mean_squared_error(y_test, y_pred)
     mae = mean_absolute_error(y_test, y_pred)
     r2 = r2_score(y_test, y_pred)
-    #Intentionally Fail
-    r2 = 0.2
 
     Performance_Metric = PrettyTable(["RMSE", "MAE", "R^2"])
     Performance_Metric.add_row([rmse, mae, r2])
@@ -43,4 +41,5 @@ except FileNotFoundError:
     print(f"Error: The file '{file_path}' was not found.")
 except Exception as e:
     print(f"An error occurred during loading: {e}")
+
 
