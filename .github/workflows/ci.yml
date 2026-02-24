@@ -24,11 +24,8 @@ jobs:
     - name: Run Unit Tests
       run: pytest tests/
 
-    - name: Small-Scale Training
-      run: python train.py
-
-    - name: Small-Scale Testing
-      run: python evaluate.py
+    - name: Small-Scale Training & Testing
+      run: python run_all.py 
 
     - name: Evaluate Model
       run: python check_performance.py  # Exits with non-zero if performance < threshold
