@@ -32,3 +32,13 @@ jobs:
 
     - name: Evaluate Model
       run: python check_performance.py  # Exits with non-zero if performance < threshold
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to Staging
+      run: |
+        echo "Deploying new model artifact..."
+        # Here you might copy 'model.pkl' to a staging server or
+        # build a Docker image and push to Docker Hub.
