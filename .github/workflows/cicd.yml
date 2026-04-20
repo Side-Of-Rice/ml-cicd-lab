@@ -22,7 +22,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run Unit Tests
-      run: pytest tests/
+      run: python -m pytest tests/
 
     - name: Small-Scale Training & Testing
       run: python run_all.py 
